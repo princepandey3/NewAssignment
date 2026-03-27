@@ -14,8 +14,9 @@ const app = express();
 app.use(
   cors({
     origin: [
-      "http://localhost:5174", // Vite dev server
-      process.env.FRONTEND_URL || "https://your-production-frontend-url.com", // Update for production Vercel domain
+      //"http://localhost:5173", // Vite dev server
+      process.env.FRONTEND_URL ||
+        "https://to-do-login-functionality.vercel.app", // Update for production Vercel domain
     ],
     credentials: true,
   }),
