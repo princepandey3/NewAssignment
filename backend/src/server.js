@@ -14,12 +14,13 @@ const app = express();
 app.use(
   cors({
     origin: [
-      "http://localhost:5173", // Vite dev server
-      process.env.FRONTEND_URL,
+      "http://localhost:5174", // Vite dev server
+      process.env.FRONTEND_URL || "https://your-production-frontend-url.com", // Update for production Vercel domain
     ],
     credentials: true,
   }),
 );
+//app.use(cors());
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
